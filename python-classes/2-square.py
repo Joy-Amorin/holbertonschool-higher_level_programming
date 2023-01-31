@@ -5,10 +5,11 @@
 
 class Square:
 
+    """Write a class Square that defines a square by"
+    pruvate attribute"""
+
     def __init__(self, size=0):
 
-        """Write a class Square that defines a square by
-        private attribuete"""
         self.__size = 3
 
         if type(size) != int:
