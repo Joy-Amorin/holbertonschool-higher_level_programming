@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""add two integers """
+
 
 def add_integer(a, b=98):
-    """add two integers """
+    """check if a and b are integers and return the sum """
 
     if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
