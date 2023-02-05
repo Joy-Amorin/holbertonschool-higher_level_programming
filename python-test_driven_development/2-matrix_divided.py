@@ -21,7 +21,7 @@ must have the same size")
         for j in range(len(matrix[i])):
             if type(matrix[i][j]) != int and type(matrix[i][j]) != float:
                 raise TypeError("matrix must be a matrix \
-list of lists) of integers/floats")
+(list of lists) of integers/floats")
 
             list_matrix[i][j] = round(list_matrix[i][j] / div, 2)
     """'round' function for rounding decimal numbers """
