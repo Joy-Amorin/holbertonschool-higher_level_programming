@@ -10,3 +10,5 @@ def is_same_class(obj, a_class):
 
         result = isinstance(obj, a_class)
         return(result)
+    else:
+        return(False)
