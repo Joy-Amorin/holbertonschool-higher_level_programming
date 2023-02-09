@@ -4,4 +4,5 @@
 
 
 def lookup(obj):
+    """fuction that return of list"""
     return(dir(obj))

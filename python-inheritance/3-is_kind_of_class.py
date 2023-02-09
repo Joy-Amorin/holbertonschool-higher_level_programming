@@ -5,6 +5,7 @@ the specified class """
 
 
 def is_kind_of_class(obj, a_class):
+    """fuction to return"""
 
     result = isinstance(obj, a_class)
     return(result)
