@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""fuction that writes an object to a text file
-using JSONrepresentation"""
+"""adds all arguments to a Python list, and then save them to a file"""
 
 
 import json
@@ -23,4 +22,4 @@ if not os.path.exists(filename):
     open(filename, 'w').close()
 
 save_to_json_file(my_list, filename)
-new_list = load_from_json_file(filename)
+my_list = load_from_json_file(filename)
