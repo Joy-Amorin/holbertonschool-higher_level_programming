@@ -101,3 +101,22 @@ class Rectangle(Base):
         _str_2 = f" - {self.__width}/{self.__height}"
 
         return(_str + _str_2)
+
+    def update(self, *args):
+        """asigns an argument to each attribute"""
+
+        if args:
+    
+            for count, arg in enumerate(args):
+                if count == 0:
+                    self.id = arg
+                if count == 1:
+                    self.__width = arg
+                if count == 2:
+                    self.__height = arg
+                if count == 3:
+                    self.__x = arg
+                if count == 3:
+                    self.__y = arg
+
+            return(arg)
