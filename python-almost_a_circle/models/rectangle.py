@@ -87,11 +87,15 @@ class Rectangle(Base):
     def display(self):
         """that prints in stdout the Rectangle instance with the character #"""
 
+        for x in range(self.__y):
+            print()
+
         for i in range(self.__height):
+            print(" " * self.__x, end="")
             print('#' * self.__width)
 
     def __str__(self):
-        """Update the class Rectangle by overriding the __str__ method """
+        """Update the class Rectangle by overriding the __str__ method"""
 
         _str = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
         _str_2 = f" - {self.__width}/{self.__height}"
