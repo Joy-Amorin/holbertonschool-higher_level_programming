@@ -106,7 +106,7 @@ class Rectangle(Base):
         """asigns an argument to each attribute"""
 
         if args:
-    
+
             for count, arg in enumerate(args):
                 if count == 0:
                     self.id = arg
@@ -116,7 +116,7 @@ class Rectangle(Base):
                     self.__height = arg
                 if count == 3:
                     self.__x = arg
-                if count == 3:
+                if count == 4:
                     self.__y = arg
 
             return(arg)
