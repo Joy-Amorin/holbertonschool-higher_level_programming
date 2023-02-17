@@ -12,12 +12,9 @@ class Square(Rectangle):
 
         super().__init__(size, size, x, y, id)
 
-        self.__width = size
-        self.__height = size
-
     def __str__(self):
 
-        _str = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.__width}")
+        _str = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
         return(_str)
 
     @property
@@ -32,9 +29,14 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-        if type(value) != int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be > 0")
+    def update(self, *args, **kwargs):
+        """assigns attributes to list args"""
 
-        self.width = value
+        if len(args) > 0:
+            arg_list = ["id", "size", "x", "y"]
+
+            for i, arg in zip(arg_list, args):
+                setattr(self, i, arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
